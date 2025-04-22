@@ -1,4 +1,5 @@
 // import React from "react";
+import { Link } from "react-router-dom";
 import About_Image from "../../assets/about_us.jpeg";
 import { FaArrowRightLong } from "react-icons/fa6";
 const About_us = () => {
@@ -27,7 +28,7 @@ const About_us = () => {
           </span>
         </p>
         <div className="flex flex-row gap-x-2 items-center not-md:border not-md:border-[#fd9800]  hover:border rounded-full px-4 py-2 hover:border-[#fd9800] w-fit ease-in duration-200 hover:cursor-pointer">
-        <a href="#">Learn More</a>
+        <Link to='/about'>Learn More</Link>
         <FaArrowRightLong color="#454F5E" />
         </div>
       </div>

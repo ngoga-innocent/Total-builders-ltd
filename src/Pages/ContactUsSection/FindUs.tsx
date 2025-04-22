@@ -19,7 +19,7 @@ const FindUs = () => {
               loading="lazy"
             ></iframe>
           </div>
-          <div className="flex-1 flex flex-col py-6 md:py-10 bg-[#FEF9E1] rounded-2xl md:px-8">
+          <div className="flex-1 flex flex-col py-6 md:py-10 bg-[#FEF9E1] rounded-2xl px-4 md:px-8">
             <h1 className="text-xl md:text-3xl py-4">Submit a Request</h1>
             <form action="" className="gap-y-4 flex flex-col">
                 <div className="flex flex-col">
