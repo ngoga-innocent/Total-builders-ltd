@@ -5,7 +5,7 @@ import ServiceImage2 from "../../assets/TotalImages/image2.jpeg";
 import ServiceImage3 from "../../assets/TotalImages/image3.jpeg";
 import ServiceImage4 from "../../assets/TotalImages/Image4.jpeg";
 import ServiceImage5 from "../../assets/TotalImages/Image7.jpeg";
-import ServiceImage6 from "../../assets/TotalImages/image6.jpeg";
+import ServiceImage6 from "../../assets/TotalImages/Image6.jpeg";
 const AllServices = () => {
   const services = [
     {
