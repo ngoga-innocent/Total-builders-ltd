@@ -4,10 +4,10 @@ import Project2 from '../../assets/TotalImages/image2.jpeg'
 import Project3 from '../../assets/TotalImages/image3.jpeg'
 import Project4 from '../../assets/TotalImages/Image4.jpeg'
 import Project10 from '../../assets/TotalImages/Image10.jpeg'
-import Project6 from '../../assets/TotalImages/image6.jpeg'
-import Project7 from '../../assets/TotalImages/image7.jpeg'
-import Project8 from '../../assets/TotalImages/image8.jpeg'
-import Project9 from '../../assets/TotalImages/image9.jpeg'
+import Project6 from '../../assets/TotalImages/Image6.jpeg'
+import Project7 from '../../assets/TotalImages/Image7.jpeg'
+import Project8 from '../../assets/TotalImages/Image8.jpeg'
+import Project9 from '../../assets/TotalImages/Image9.jpeg'
 import { BsBuildingsFill } from "react-icons/bs";
 const OurProjects = () => {
     const projects=[
