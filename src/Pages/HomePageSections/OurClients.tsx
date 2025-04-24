@@ -36,7 +36,7 @@ const OurClients = () => {
           </p>
         </div>
         {loading && <p>Loading Clients...</p>}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-x-3 w-[90%] py-3 md:py-12 mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-x-3 gap-y-2 w-[90%] py-3 md:py-12 mx-auto">
             {clients?.map((client:any,index)=>(
                 <div key={index} className="relative shadow-md shadow-black z-10 w-[100%] flex flex-col items-center justify-center group h-[20vh] bg-white rounded-md overflow-clip">
                     <div className="inset-0 group-hover:bg-black/40 absolute h-[100%] w-[100%] -translate-y-[100%] group-hover:translate-y-0 duration-200 ease-in"></div>

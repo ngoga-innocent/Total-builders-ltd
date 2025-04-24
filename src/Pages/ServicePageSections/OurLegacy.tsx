@@ -46,7 +46,7 @@ const OurLegacy = () => {
               <p>Creative solutions</p>
             </li>
           </ul>
-          <Link to='/' className="flex flex-row items-center gap-x-2 rounded-full border border-[#0f172a] w-fit px-4 py-2 md:py-3">
+          <Link to='/contact' className="flex flex-row items-center gap-x-2 rounded-full border border-[#0f172a] hover:bg-amber-300 transition ease-in w-fit px-4 py-2 md:py-3">
             <h2 className="md:text-xl">Call Us Now</h2>
             <FaChevronRight />
           </Link>
