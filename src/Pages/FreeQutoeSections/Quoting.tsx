@@ -84,7 +84,7 @@ const Quoting = () => {
       <form
         action=""
         onSubmit={handleSubmit}
-        className="bg-white rounded-lg py-2 md:py-6 w-[40vw] gap-y-3 flex flex-col"
+        className="bg-white rounded-lg py-2 md:py-6 md:w-[40vw] w-[90vw] px-3 gap-y-3 flex flex-col"
       >
         <div className="flex flex-col w-[90%] mx-auto">
           <label htmlFor="Name" className="text-gray-400">
