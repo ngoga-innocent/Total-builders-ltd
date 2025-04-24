@@ -11,7 +11,7 @@ const EngineerQuote = () => {
             <h3 className='text-lg md:text-3xl '>Ready to Transform Your <br /> Outdoor Space</h3>
             <p>Contact us today to schedule a consultation or to learn more about our services.</p>
 
-            <Link className='rounded-full py-2 px-4 text-white bg-[#fd9800] w-fit' to='/'>Get A free Quote</Link>
+            <Link className='rounded-full py-2 px-4 text-white bg-[#fd9800] hover:bg-[#fd9800]/80 w-fit' to='/free-quote'>Get A free Quote</Link>
         </div>
       </div>
     </div>

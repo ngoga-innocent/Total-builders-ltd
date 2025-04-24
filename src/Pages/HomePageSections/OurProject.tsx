@@ -3,6 +3,7 @@ import Service1 from "../../assets/landing.jpg";
 import Service2 from "../../assets/road.jpg";
 import Service3 from "../../assets/construction.webp";
 import { FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const OurProject = () => {
   const projects = [
     {
@@ -39,7 +40,7 @@ const OurProject = () => {
           ))}
         </div>
         <div className="border-2 border-[#0F172A] rounded-full py-3 md:my-10 px-5 flex flex-row items-center gap-x-5 hover:border-[#fd9800] hover:text-white hover:font-bold hover:bg-[#fd9800] hover:cursor-pointer ease-in-out duration-300">
-                  <button className="">Explore Our Projects</button>
+                  <Link to='/projects' className="">Explore Our Projects</Link>
                   <FaChevronRight />
                 </div>
       </div>

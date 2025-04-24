@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Services from "./Pages/services";
 import Contact_us from "./Pages/Contact_us";
+import GetQuote from "./Pages/GetQuote";
 function App() {
   
 
@@ -29,6 +30,8 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact_us />} />
+        <Route path="/free-quote" element={<GetQuote />} />
+        
         
       </Routes>
 
