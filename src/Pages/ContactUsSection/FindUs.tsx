@@ -1,6 +1,55 @@
 // import React from 'react'
 import { BsBuildingsFill } from "react-icons/bs";
+import { useState } from "react";
+import { url } from "../../url";
 const FindUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setResponseMessage("");
+
+    try {
+      const response = await fetch(`${url}/api/contact/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setResponseMessage("✅ Message sent successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" }); // clear form
+      } else {
+        setResponseMessage("❌ Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setResponseMessage("❌ Something went wrong.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="flex flex-col w-screen py-6 md:py-20 ">
       <div className="w-[90vw] md:w-[80vw] mx-auto flex flex-col items-center">
@@ -21,24 +70,66 @@ const FindUs = () => {
           </div>
           <div className="flex-1 flex flex-col py-6 md:py-10 bg-[#FEF9E1] rounded-2xl px-4 md:px-8">
             <h1 className="text-xl md:text-3xl py-4">Submit a Request</h1>
-            <form action="" className="gap-y-4 flex flex-col">
-                <div className="flex flex-col">
-                    <p>Name *</p>
-                    <input type="text" required className="border border-[#0f172a] rounded p-2 bg-white" placeholder="Enter Full Name" />
-                </div>
-                <div className="flex flex-col">
-                    <p>Email *</p>
-                    <input type="email" required className="border border-[#0f172a] rounded p-2 bg-white" placeholder="Enter email address" />
-                </div>
-                <div className="flex flex-col">
-                    <p>Phone Number *</p>
-                    <input type="text" required className="border border-[#0f172a] rounded p-2 bg-white" placeholder="Enter Phone number" />
-                </div>
-                <div className="flex flex-col">
-                    <p>Message *</p>
-                    <textarea  required rows={4} cols={50} className="border border-[#0f172a] rounded p-2 bg-white" placeholder="Enter Full Name" />
-                </div>
-                <button className="py-4 px-7 md:px-10 rounded-full bg-[#FD9800] text-[#0f172a] w-fit  font-bold">Submit</button>
+            <form onSubmit={handleSubmit} className="gap-y-4 flex flex-col">
+              <div className="flex flex-col">
+                <p>Name *</p>
+                <input
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  value={formData.name}
+                  required
+                  className="border border-[#0f172a] rounded p-2 bg-white"
+                  placeholder="Enter Full Name"
+                />
+              </div>
+              <div className="flex flex-col">
+                <p>Email *</p>
+                <input
+                  type="email"
+                  name="email"
+                  onChange={handleChange} // ✅ This was missing
+                  value={formData.email}
+                  required
+                  className="border border-[#0f172a] rounded p-2 bg-white"
+                  placeholder="Enter email address"
+                />
+              </div>
+              <div className="flex flex-col">
+                <p>Phone Number *</p>
+                <input
+                  type="text"
+                  name="phone"
+                  onChange={handleChange}
+                  value={formData.phone}
+                  required
+                  className="border border-[#0f172a] rounded p-2 bg-white"
+                  placeholder="Enter Phone number"
+                />
+              </div>
+              <div className="flex flex-col">
+                <p>Message *</p>
+                <textarea
+                  name="message"
+                  onChange={handleChange} // ✅ This was missing
+                  value={formData.message}
+                  required
+                  rows={4}
+                  cols={50}
+                  className="border border-[#0f172a] rounded p-2 bg-white"
+                  placeholder="Write your message here"
+                />
+              </div>
+              <button
+                type="submit"
+                className="py-4 px-7 md:px-10 rounded-full bg-[#FD9800] text-[#0f172a] w-fit font-bold"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Submit"}
+              </button>
+              {responseMessage && (
+                <p className="text-sm mt-2">{responseMessage}</p>
+              )}
             </form>
           </div>
         </div>

@@ -6,6 +6,7 @@ import OurProject from './HomePageSections/OurProject'
 import Testimonails from './HomePageSections/Testimonails'
 import HeroSection from './HomePageSections/HeroSection'
 import EngineerQuote from './SharedSections/EngineerQuote'
+import OurClients from './HomePageSections/OurClients'
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <OurServices />
       <WhyUs />
       <OurProject />
+      <OurClients />
       <Testimonails />
       <EngineerQuote />
     </div>
