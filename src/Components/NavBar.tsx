@@ -16,7 +16,10 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setScrolled(scrollY > window.innerHeight * 0.8);
+      console.log(scrollY)
+      console.log("inner height",window.innerHeight * 0.2);
+      
+      setScrolled(scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -36,7 +39,7 @@ const NavBar = () => {
     >
       <div className="font-bold flex flex-row justify-between items-center w-[80%] mx-auto py-3">
         <div>
-          <img src={Logo} alt="Total Builders Ltd" className="w-[10rem] md:w-md" />
+          <img src={Logo} alt="Total Builders Ltd" className="w-[7rem] md:w-[14rem]" />
         </div>
         <div>
           <ul className="hidden md:flex flex-row">
