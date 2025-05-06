@@ -52,9 +52,9 @@ const OurProject = () => {
         <div className="grid grid-cols-1 not-md:gap-y-2 md:grid-cols-3 gap-x-5">
           {projects.map((project:any, index) => (
             <div key={index} className="relative overflow-clip group rounded-xl flex flex-col  items-cemter">
-                <div className="absolute group-hover:inset-0 bg-black/60 -translate-y-[200px] group-hover:translate-y-0 ease-in-out duration-300"></div>
+                <div className="absolute group-hover:inset-0 bg-black/60 -translate-y-[250px] group-hover:translate-y-0 ease-in-out duration-300"></div>
               <img src={project?.image} alt="" className="w-[100%] h-[100%]" />
-              <p className="absolute top-[30%] left-[20%] w-[50%] mx-auto text-white lowercase text-center translate-y-[200px] group-hover:translate-y-0 ease-in-out duration-300">{project.title}</p>
+              <p className="absolute top-[30%] left-[20%] w-[50%] mx-auto text-white font-bold capitalize text-center translate-y-[100vh] group-hover:translate-y-0 ease-in-out duration-300">{project.title}</p>
             </div>
           ))}
         </div>

@@ -5,7 +5,7 @@ import EngineerQuote from './SharedSections/EngineerQuote'
 
 const Projects = () => {
   return (
-    <div>
+    <div className='relative'>
       <ProjectHero />
       <OurProjects />
       <EngineerQuote />
