@@ -44,7 +44,7 @@ const OurProjects = () => {
   // ]
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [activeProject, setActiveProject] = useState<any>();
+  // const [activeProject, setActiveProject] = useState<any>();
   useEffect(() => {
     axios
       .get(`${url}/api/projects/`) // replace with your actual API domain if hosted
@@ -73,7 +73,7 @@ const OurProjects = () => {
           {projects.map((project: any, index) => (
             <div
               key={index}
-              onClick={() => setActiveProject(project)}
+              // onClick={() => setActiveProject(project)}
               className="rounded-xl md:rounded-2xl group flex flex-col cursor-pointer shadow-md hover:shadow-lg transition duration-300 overflow-hidden"
             >
               <img
