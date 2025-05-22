@@ -1,7 +1,7 @@
 // import React from "react";
 import { BsFillBuildingsFill } from "react-icons/bs";
-import whyUs from '../../assets/architect.webp'
-import topImage from '../../assets/construction.webp'
+import whyUs from '../../assets/WhyUS.jpeg'
+import topImage from '../../assets/TopImage.jpeg'
 const WhyUs = () => {
   return (
     <div className="w-full flex text-white flex-col bg-[#0F172A] not-md:text-center items-center justify-center md:h-screen">

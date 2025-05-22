@@ -1,9 +1,9 @@
 // import React from 'react'
-import Engineer from '../../assets/TotalImages/engineer2.jpg'
+import Engineer from '../../assets/QuoteImage.jpeg'
 import { Link } from 'react-router-dom'
 const EngineerQuote = () => {
   return (
-    <div className='h-[60vh] flex flex-col text-white bg-cover  bg-no-repeat' style={{
+    <div className='h-[60vh] flex flex-col text-white bg-cover bg-center bg-no-repeat' style={{
         backgroundImage:`linear-gradient(to right,rgba(0,0,0,0.4),rgba(253,152,0,0.4)),url(${Engineer})`
     }}>
       <div className='w-[80vw] mx-auto flex flex-col md:items-end justify-center h-[100%]'>
