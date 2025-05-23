@@ -3,7 +3,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 // import { FaMessage } from "react-icons/fa6";
 import { MdMarkEmailRead } from "react-icons/md";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Footer = () => {
   const linkClasses = (path: string) =>
     `p-4 transition-colors duration-200 hover:text-[rgb(253,152,0)] ${
