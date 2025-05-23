@@ -3,7 +3,12 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 // import { FaMessage } from "react-icons/fa6";
 import { MdMarkEmailRead } from "react-icons/md";
+import { Link, useLocation } from "react-router-dom";
 const Footer = () => {
+  const linkClasses = (path: string) =>
+    `p-4 transition-colors duration-200 hover:text-[rgb(253,152,0)] ${
+      location.pathname === path ? "text-[rgb(253,152,0)] font-semibold" : ""
+    }`;
   return (
     <div className="flex flex-col  divide-y text-[#0F172A] not-md:text-center divide-[#0f172a]/30 w-screen bg-[#FEF9E1] py-6 md:py-12">
       <div className="w-[90%] mx-auto not-md:flex not-md:flex-col  md:grid  not-md:items-center not-md:justify-center md:grid-cols-4 gap-x-2 gap-y-2 py-2">
@@ -19,10 +24,11 @@ const Footer = () => {
         <div className="flex flex-col gap-y-3">
           <h3 className="text-[#0F172A] font-bold text-lg md:text-xl ">Quick Links</h3>
           <ul className="flex flex-row md:block not-md:w-[90%] not-md:mx-auto gap-x-2">
-            <li>Home</li>
-            <li>About</li>
-            <li>Service</li>
-            <li>Contact</li>
+            <li><Link to="/" className={linkClasses("/")}>Home</Link></li>
+            <li><Link to="/about" className={linkClasses("/about")}>About</Link></li>
+            <li><Link to="/services" className={linkClasses("/services")}>Services</Link></li>
+            <li><Link to="/projects" className={linkClasses("/projects")}>Projects</Link></li>
+            <li><Link to="/contact" className={linkClasses("/contact")}>Contact</Link></li>
           </ul>
         </div>
         <div className="flex flex-col gap-y-3">

@@ -35,7 +35,7 @@ const AboutMission = () => {
                 <GoGoal />
                 <h4 className="uppercase text-sm">The Outlook</h4>
               </div>
-              <h2 className="text-lg md:text-3xl">Our Vission</h2>
+              <h2 className="text-lg md:text-3xl">Our Vision</h2>
             </div>
             <p>
               At Total Builders Ltd., we strive to be a globally recognized

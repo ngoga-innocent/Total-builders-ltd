@@ -8,6 +8,8 @@ import Projects from "./Pages/Projects";
 import Services from "./Pages/services";
 import Contact_us from "./Pages/Contact_us";
 import GetQuote from "./Pages/GetQuote";
+import ScrollToTop from "./Components/ScrollToTop";
+import ScrollTopButton from "./Components/BackToTop";
 function App() {
   
 
@@ -16,6 +18,7 @@ function App() {
   return (
     <Router>
       {/* Shared Nav */}
+      <ScrollToTop />
       <div
         className={`absolute top-0`}
         
@@ -36,6 +39,8 @@ function App() {
       </Routes>
 
       {/* Shared Footer */}
+      
+      <ScrollTopButton />
       <Footer />
     </Router>
   );
