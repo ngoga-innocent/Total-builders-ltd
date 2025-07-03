@@ -119,7 +119,7 @@ const OurProjects = () => {
           <div
             ref={modalRef}
             className={`
-    h-full overflow-y-scroll w-[70vw] bg-white flex flex-col rounded-tl-[4rem] items-center relative
+    h-full overflow-y-scroll w-full md:w-[70vw] bg-white flex flex-col not-md:justify-between px-3 md:rounded-tl-[4rem] items-center relative
     transform transition-transform duration-300
     ${modalVisible ? "translate-x-0" : "translate-x-full"}
   `}

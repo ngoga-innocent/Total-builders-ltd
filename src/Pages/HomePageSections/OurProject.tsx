@@ -66,7 +66,7 @@ const OurProject = () => {
                 className="w-[100%] h-[100%]"
               />
               <p className="absolute top-[30%] left-[20%] w-[50%] mx-auto text-white font-bold capitalize text-center translate-y-[100vh] group-hover:translate-y-0 ease-in-out duration-300">
-                {project.title}
+                {project?.title}
               </p>
             </div>
           ))}

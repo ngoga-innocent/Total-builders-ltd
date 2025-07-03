@@ -23,7 +23,7 @@ const Footer = () => {
         {/* Quick Links */}
         <div className="flex flex-col gap-y-3">
           <h3 className="text-[#0F172A] font-bold text-lg md:text-xl ">Quick Links</h3>
-          <ul className="flex flex-row md:block not-md:w-[90%] not-md:mx-auto gap-x-2">
+          <ul className="flex flex-row flex-wrap md:block not-md:w-[90%] not-md:mx-auto gap-x-2">
             <li><Link to="/" className={linkClasses("/")}>Home</Link></li>
             <li><Link to="/about" className={linkClasses("/about")}>About</Link></li>
             <li><Link to="/services" className={linkClasses("/services")}>Services</Link></li>
