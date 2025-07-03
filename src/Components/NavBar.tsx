@@ -64,7 +64,7 @@ const NavBar = () => {
           menu ? "left-0 bg-white" : "-left-full"
         }`}
       >
-        <ul className="md:hidden flex flex-col">
+        <ul className="md:hidden flex flex-col gap-y-2">
           <li><Link to="/" onClick={() => setMenu(false)} className={linkClasses("/")}>Home</Link></li>
           <li><Link to="/about" onClick={() => setMenu(false)} className={linkClasses("/about")}>About</Link></li>
           <li><Link to="/services" onClick={() => setMenu(false)} className={linkClasses("/services")}>Services</Link></li>
