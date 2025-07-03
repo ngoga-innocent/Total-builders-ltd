@@ -45,7 +45,7 @@ const Footer = () => {
           <p>Nduba, Gasabo,Kigali City, RWANDA</p>
 
           <div className="mt-8 flex flex-col gap-y-1">
-            <div className="flex flex-row items-center gap-x-2">
+            <a href="//api.whatsapp.com/send?phone=250788258922&text=Hello" target="_blank" className="flex flex-row items-center gap-x-2">
               <div className="py-4 px-2 border-3 border-[#0f172a] rounded-lg">
                 <FaPhoneAlt
                   color="#0000FF"
@@ -56,7 +56,7 @@ const Footer = () => {
               </div>
               {/* <FaMessage  color="#008000" size={24} /> */}
               <p>+250783115599</p>
-            </div>
+            </a>
             <div className="flex flex-row gap-x-2 items-center">
               <div className="py-4 px-2 border-3 border-[#0f172a] rounded-lg">
               <MdMarkEmailRead size={25} />

@@ -11,30 +11,58 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { url } from "../../url";
 const Quoting = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [loading, setLoading] = useState(false);
-    const [response, setResponse] = useState({ type: '', message: '' });
-  
-    const handleChange = (e:any) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-  
-    const handleSubmit = async (e:any) => {
-      e.preventDefault();
-      setLoading(true);
-      setResponse({ type: '', message: '' });
-  
-      try {
-        const res = await axios.post(`${url}/api/submit-quote/`, formData);
-        setResponse({ type: 'success', message: res.data.message });
-        setFormData({ name: '', email: '', message: '' }); // Clear form
-      } catch (err) {
-        setResponse({ type: 'error', message: 'Failed to send message. Please try again.' });
-      } finally {
-        setLoading(false);
-      }
+  const [formData, setFormData] = useState<{
+    name: string;
+    email: string;
+    message: string;
+    attachment: File | null;
+  }>({
+    name: "",
+    email: "",
+    message: "",
+    attachment: null
+  });
+  const [loading, setLoading] = useState(false);
+  const [response, setResponse] = useState({ type: "", message: "" });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, files } = e.target as HTMLInputElement;
+    if (name === "attachment" && files) {
+      setFormData((prev) => ({ ...prev, attachment: files[0] }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
     }
-  
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    setResponse({ type: "", message: "" });
+
+    const data = new FormData();
+    data.append("name", formData.name);
+    data.append("email", formData.email);
+    data.append("message", formData.message);
+    if (formData.attachment) {
+      data.append("attachment", formData.attachment);
+    }
+
+    try {
+      const res = await axios.post(`${url}/api/submit-quote/`, data);
+      setResponse({ type: "success", message: res.data.message });
+      setFormData({ name: "", email: "", message: "", attachment: null }); // Clear form
+    } catch (err) {
+      setResponse({
+        type: "error",
+        message: "Failed to send message. Please try again."
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="bg-[#02044A] w-[90vw] my-3 rounded-md md:rounded-3xl mx-auto px-3 md:px-8 flex flex-col gap-y-4 md:flex-row md:gap-x-20 justify-between py-2 md:py-12">
       <div className="flex flex-col gap-y-3 md:gap-y-7">
@@ -134,21 +162,37 @@ const Quoting = () => {
             className="outline-none border rounded-lg h-[10vh] px-3 border-gray-400 text-gray-400"
             id=""
           />
+          <div className="flex flex-row items-center gap-x-2 py-3 w-[100%]">
+            <label>Attachment</label>
+            <input
+              type="file"
+              onChange={handleChange}
+              name="attachment"
+              // value={formData?.attachment}
+              className="border border-gray-400 bg-gray-100 py-2 rounded-md w-fit flex-1 px-3"
+            />
+          </div>
         </div>
         <button
-    type="submit"
-    disabled={loading}
-    className={`bg-[#2C68CF] py-3 px-7 rounded-lg self-end mr-[5%] text-white cursor-pointer hover:bg-[#2C68CF]/80 ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
-  >
-    {loading ? 'Sending...' : 'Send Message'}
-  </button>
+          type="submit"
+          disabled={loading}
+          className={`bg-[#2C68CF] py-3 px-7 rounded-lg self-end mr-[5%] text-white cursor-pointer hover:bg-[#2C68CF]/80 ${
+            loading ? "opacity-50 cursor-not-allowed" : ""
+          }`}
+        >
+          {loading ? "Sending..." : "Send Message"}
+        </button>
 
-  {/* Response Message */}
-  {response.message && (
-    <p className={`text-sm text-center ${response.type === 'success' ? 'text-green-500' : 'text-red-500'}`}>
-      {response.message}
-    </p>
-  )}
+        {/* Response Message */}
+        {response.message && (
+          <p
+            className={`text-sm text-center ${
+              response.type === "success" ? "text-green-500" : "text-red-500"
+            }`}
+          >
+            {response.message}
+          </p>
+        )}
       </form>
     </div>
   );

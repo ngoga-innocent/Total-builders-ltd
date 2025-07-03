@@ -16,8 +16,8 @@ const NavBar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      console.log(scrollY)
-      console.log("inner height",window.innerHeight * 0.2);
+      // console.log(scrollY)
+      // console.log("inner height",window.innerHeight * 0.2);
       
       setScrolled(scrollY > 10);
     };

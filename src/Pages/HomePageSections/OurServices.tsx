@@ -12,7 +12,7 @@ const OurServices = () => {
     axios.get(`${url}/api/services/`)  // replace with your actual API domain if hosted
       .then((res:any) => {
         setServices(res.data);
-        console.log("services",res)
+        // console.log("services",res)
         setLoading(false);
       })
       .catch((err:any) => {
