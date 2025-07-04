@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Road from "../../assets/homepage.jpg";
-import Road1 from "../../assets/homepage2.jpg";
+import Road from "../../assets/home1.jpeg";
+import Road1 from "../../assets/home 2.jpeg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
@@ -40,11 +40,11 @@ const HeroSection = () => {
       {/* Sliding Backgrounds */}
       <div className="absolute inset-0 z-0">
         <div
-          className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out ${
+          className={`absolute inset-0 bg-cover  bg-center transition-transform duration-700 ease-in-out ${
             isAnimating ? "-translate-y-full" : "translate-y-0"
           }`}
           style={{
-            backgroundImage: `linear-gradient(to bottom, rgba(253,152,0,0.2), rgba(0,0,0,0.3)), url(${Slides[previous].img})`,
+            backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url(${Slides[previous].img})`,
           }}
         />
         <div
@@ -52,7 +52,7 @@ const HeroSection = () => {
             isAnimating ? "translate-y-0" : "translate-y-full"
           }`}
           style={{
-            backgroundImage: `linear-gradient(to bottom, rgba(253,152,0,0.2), rgba(0,0,0,0.3)), url(${Slides[current].img})`,
+            backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url(${Slides[current].img})`,
           }}
         />
       </div>

@@ -14,25 +14,54 @@ const Footer = () => {
       <div className="w-[90%] mx-auto not-md:flex not-md:flex-col  md:grid  not-md:items-center not-md:justify-center md:grid-cols-4 gap-x-2 gap-y-2 py-2">
         {/* div 1 */}
         <div className="flex flex-col not-md:items-center not-md:justify-center gap-y-2 md:gap-y-4">
-          <img src="logo.png" className="w-[12vw]" alt="Totak Builders ltd" />
-          <p>
+          <img
+            src="logo.png"
+            className=" w-[40vw] md:w-[12vw]"
+            alt="Total Builders ltd"
+          />
+          <p className="text-[#0F172A] md:text-xl not-md:text-sm">
             Get Professional Construction & Architecting Services for a better
             Tomorrow
           </p>
         </div>
         {/* Quick Links */}
-        <div className="flex flex-col gap-y-3">
-          <h3 className="text-[#0F172A] font-bold text-lg md:text-xl ">Quick Links</h3>
-          <ul className="flex flex-row flex-wrap md:block not-md:w-[90%] not-md:mx-auto gap-x-2">
-            <li><Link to="/" className={linkClasses("/")}>Home</Link></li>
-            <li><Link to="/about" className={linkClasses("/about")}>About</Link></li>
-            <li><Link to="/services" className={linkClasses("/services")}>Services</Link></li>
-            <li><Link to="/projects" className={linkClasses("/projects")}>Projects</Link></li>
-            <li><Link to="/contact" className={linkClasses("/contact")}>Contact</Link></li>
+        <div className="flex flex-col gap-y-1 md:gap-y-3">
+          <h3 className="text-[#0F172A] font-bold text-lg md:text-xl ">
+            Quick Links
+          </h3>
+          <ul className="flex flex-row flex-wrap md:block not-md:w-[100%] not-md:mx-auto gap-x-1 md:gap-x-2">
+            <li className="not-md:text-sm">
+              <Link to="/" className={linkClasses("/")}>
+                Home
+              </Link>
+            </li>
+            <li className="not-md:text-sm">
+              <Link to="/about" className={linkClasses("/about")}>
+                About
+              </Link>
+            </li>
+            <li className="not-md:text-sm">
+              <Link to="/services" className={linkClasses("/services")}>
+                Services
+              </Link>
+            </li>
+            <li className="not-md:text-sm">
+              <Link to="/projects" className={linkClasses("/projects")}>
+                Projects
+              </Link>
+            </li>
+            <li className="not-md:text-sm">
+              <Link to="/contact" className={linkClasses("/contact")}>
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
-        <div className="flex flex-col gap-y-3">
-          <h3 className="text-[#0F172A] font-bold text-lg md:text-xl "> Services</h3>
+        <div className="hidden md:flex flex-col gap-y-1 md:gap-y-3">
+          <h3 className="text-[#0F172A] font-bold text-lg md:text-xl ">
+            {" "}
+            Services
+          </h3>
           <ul className="list-disc">
             <li>Electrical infrastructure design and consultation </li>
             <li>Civil engineering studies and supervision</li>
@@ -40,34 +69,48 @@ const Footer = () => {
             <li>Environmental management and sustainability</li>
           </ul>
         </div>
-        <div className="flex flex-col gap-y-3">
-          <h3 className="text-[#0F172A] font-bold text-lg md:text-xl ">Address</h3>
-          <p>Nduba, Gasabo,Kigali City, RWANDA</p>
+        <div className="flex flex-col gap-y-1 md:gap-y-3">
+          <h3 className="text-[#0F172A] font-bold text-lg md:text-xl ">
+            Address
+          </h3>
+          <p className="text-[#0F172A] md:text-xl not-md:text-sm">Nduba, Gasabo,Kigali City, RWANDA</p>
 
           <div className="mt-8 flex flex-col gap-y-1">
-            <a href="//api.whatsapp.com/send?phone=250788258922&text=Hello" target="_blank" className="flex flex-row items-center gap-x-2">
+            <a
+              href="//api.whatsapp.com/send?phone=250788258922&text=Hello"
+              target="_blank"
+              className="flex flex-row items-center gap-x-2"
+            >
               <div className="py-4 px-2 border-3 border-[#0f172a] rounded-lg">
                 <FaPhoneAlt
                   color="#0000FF"
-                  size={20}
-                  className="text-[#0F172A] text-2xl"
+                  // size={20}
+                  className="text-[#0F172A] md:text-xl not-md:text-sm"
                 />
-                <TbBrandWhatsappFilled color="#075E54" size={24} />
+                <TbBrandWhatsappFilled
+                  color="#075E54"
+                  className="text-[#0F172A] md:text-xl not-md:text-sm"
+                />
               </div>
               {/* <FaMessage  color="#008000" size={24} /> */}
-              <p>+250783115599</p>
+              <p className="text-[#0F172A] md:text-xl not-md:text-sm">+250783115599</p>
             </a>
             <div className="flex flex-row gap-x-2 items-center">
               <div className="py-4 px-2 border-3 border-[#0f172a] rounded-lg">
-              <MdMarkEmailRead size={25} />
+                <MdMarkEmailRead
+                  // size={25}
+                  className="text-[#0F172A] md:text-xl not-md:text-sm"
+                />
               </div>
-              <p>totalbuildierslimited@gmail.com</p>
+              <p className="text-[#0F172A] md:text-xl not-md:text-sm">totalbuildierslimited@gmail.com</p>
             </div>
           </div>
         </div>
       </div>
       <div className="w-[90%] mx-auto flex flex-col items-center py-4">
-        <p className="text-[#0F172A]/30">copyright &copy; 2025 Total builders ltd All right reserved </p>
+        <p className="text-[#0F172A]/30 not-md:font-bold not-md:text-sm">
+          copyright &copy; 2025 Total builders ltd All right reserved{" "}
+        </p>
       </div>
     </div>
   );

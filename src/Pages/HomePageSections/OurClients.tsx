@@ -22,7 +22,7 @@ const OurClients = () => {
   }, []);
 
   return (
-    <div className="bg-[#160644] relative flex flex-col overflow-clip h-[90vh] w-screen justify-end">
+    <div className="bg-[#160644] relative flex flex-col overflow-clip h-fit not-md:py-5 md:h-[90vh] w-screen justify-end">
       <div className="w-[70vw] h-[70vw] rounded-full bg-[#588CCA] opacity-90 absolute -right-[15vw] bottom-[10vw]"></div>
       <div className="w-[90%] mx-auto z-50 bg-white rounded-t-lg flex flex-col items-center justify-center py-3 md:py-12">
         <h1 className="text-2xl md:text-7xl text-white text-shadow-lg/100 font-bold opacity-0.6">
