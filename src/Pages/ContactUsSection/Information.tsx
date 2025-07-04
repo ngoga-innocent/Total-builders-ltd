@@ -11,7 +11,7 @@ const Information = () => {
               <FaPhoneAlt color="FEF9E1" size={23} />  
             </div>
             <h1 className="text-xl md:text-2xl">Make a Call</h1>
-            <p className="text-[#454F5E]">phone:+250785816613  whatsapp:+250785816613</p>
+            <p className="text-[#454F5E]">phone:+250783115599  whatsapp:+250783115599</p>
         </div>
         <div className="flex flex-col bg-white rounded-xl py-7 px-7 gap-y-3">
             <div className="rounded-full w-[4vw] h-[4vw] p-2 md:p-4 bg-[#454F5E] flex flex-col items-center justify-center">

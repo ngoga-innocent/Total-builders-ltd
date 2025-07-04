@@ -77,7 +77,7 @@ const Footer = () => {
 
           <div className="mt-8 flex flex-col gap-y-1">
             <a
-              href="//api.whatsapp.com/send?phone=250788258922&text=Hello"
+              href="//api.whatsapp.com/send?phone=250783115599&text=Hello"
               target="_blank"
               className="flex flex-row items-center gap-x-2"
             >
