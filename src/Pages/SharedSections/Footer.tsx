@@ -3,6 +3,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 // import { FaMessage } from "react-icons/fa6";
 import { MdMarkEmailRead } from "react-icons/md";
+import CompanyLogo from '../../assets/housemajelogo.svg'
 import { Link } from "react-router-dom";
 const Footer = () => {
   const linkClasses = (path: string) =>
@@ -10,7 +11,7 @@ const Footer = () => {
       location.pathname === path ? "text-[rgb(253,152,0)] font-semibold" : ""
     }`;
   return (
-    <div className="flex flex-col  divide-y text-[#0F172A] not-md:text-center divide-[#0f172a]/30 w-screen bg-[#FEF9E1] py-6 md:py-12">
+    <div className="flex flex-col  divide-y text-[#0F172A] not-md:text-center divide-[#0f172a]/30 w-screen bg-[#FEF9E1] py-6 md:pt-12 md:pb-6">
       <div className="w-[90%] mx-auto not-md:flex not-md:flex-col  md:grid  not-md:items-center not-md:justify-center md:grid-cols-4 gap-x-2 gap-y-2 py-2">
         {/* div 1 */}
         <div className="flex flex-col not-md:items-center not-md:justify-center gap-y-2 md:gap-y-4">
@@ -107,10 +108,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-[90%] mx-auto flex flex-col items-center py-4">
+      <div className="w-[90%] mx-auto flex  flex-col items-center pt-4 pb-2">
         <p className="text-[#0F172A]/30 not-md:font-bold not-md:text-sm">
-          copyright &copy; 2025 Total builders ltd All right reserved{" "}
+          copyright &copy; 2025 Total builders ltd All right reserved
         </p>
+        <div className="text-xs text-gray-300 gap-x-1 flex flex-row items-center">
+        <p>powered by</p>
+        <img src={CompanyLogo} alt="House Major" />
+        {/* <p>House Major Rwanda</p> */}
+        </div>
       </div>
     </div>
   );

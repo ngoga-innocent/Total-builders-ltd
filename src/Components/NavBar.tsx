@@ -38,8 +38,11 @@ const NavBar = () => {
       }`}
     >
       <div className="font-bold flex flex-row justify-between items-center w-[80%] mx-auto py-3">
-        <div>
+        <div className="flex flex-col items-center">
           <img src={Logo} alt="Total Builders Ltd" className="w-[7rem] md:w-[14rem]" />
+          <p style={{
+             fontFamily: "Tangerine"
+          }} className="flex-end text-sm">Deliver Regardless</p>
         </div>
         <div>
           <ul className="hidden md:flex flex-row">
