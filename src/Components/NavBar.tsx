@@ -38,12 +38,14 @@ const NavBar = () => {
       }`}
     >
       <div className="font-bold flex flex-row justify-between items-center w-[80%] mx-auto py-3">
-        <div className="flex flex-col items-center">
+        <Link to='/' className="flex flex-col items-center">
           <img src={Logo} alt="Total Builders Ltd" className="w-[7rem] md:w-[14rem]" />
           <p style={{
-             fontFamily: "Tangerine"
+             fontFamily: "Corinthia, cursive",
+             fontWeight: 400
+          
           }} className="flex-end text-sm">Deliver Regardless</p>
-        </div>
+        </Link>
         <div>
           <ul className="hidden md:flex flex-row">
             <li><Link to="/" className={linkClasses("/")}>Home</Link></li>
