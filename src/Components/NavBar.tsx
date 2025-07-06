@@ -41,8 +41,8 @@ const NavBar = () => {
         <Link to='/' className="flex flex-col items-center">
           <img src={Logo} alt="Total Builders Ltd" className="w-[7rem] md:w-[14rem]" />
           <p style={{
-             fontFamily: "Corinthia, cursive",
-             fontWeight: 400
+            //  fontFamily: "Corinthia, cursive",
+            //  fontWeight: 400
           
           }} className="flex-end text-sm">Deliver Regardless</p>
         </Link>
