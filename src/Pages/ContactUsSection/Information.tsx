@@ -18,7 +18,7 @@ const Information = () => {
               <MdEmail color="FEF9E1" size={23} />  
             </div>
             <h1 className="text-xl md:text-2xl">Send Email</h1>
-            <p className="text-[#454F5E]">Email:qs.samuelrwanda@gmail.com </p>
+            <p className="text-[#454F5E]">Email:totalbuilderslimited@gmail.com </p>
         </div>
         <div className="flex flex-col bg-white rounded-xl py-7 px-7 gap-y-3">
             <div className="rounded-full w-[4vw] h-[4vw] p-2 md:p-4 bg-[#454F5E] flex flex-col items-center justify-center">
